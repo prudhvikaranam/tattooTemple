@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Temple Tattoo</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+
+    <link href="style.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kodchasan:wght@200;300;500&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      type="text/javascript"
+      src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"
+    ></script>
+    <style>
+      #loader {
+        border: 12px solid #f3f3f3;
+        border-radius: 50%;
+        border-top: 12px solid rgba(0, 127, 128, 0.6);
+        width: 70px;
+        height: 70px;
+        animation: spin 1s linear infinite;
+      }
+
+      @keyframes spin {
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      .center {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="loader" class="center"></div>
+
+    <div class="landingContainer" id="landingContainer">
+      <div class="landingtext" id="landingtext">
+        <div class="landingPageLogo" id="landingPageLogo">
+          <span id="h1">Tattoo Temple</span>
+          <span><img src="./assets/machine.png" style="width: 50px" /></span>
+        </div>
+        <p class="name" id="name"></p>
+      </div>
+    </div>
+    <div class="aboutContainer" id="aboutContainer">
+      <div class="about" id="about">
+        <p class="aboutHead">A few words about me and my tattoo salon</p>
+        <p class="aboutContent">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum minima
+          iure laboriosam est nihil.<br /><br />
+          Velit, sint delectus dignissimos eligendi amet, similique animi
+          veritatis voluptatum, minima expedita tenetur saepe quos ratione.
+        </p>
+      </div>
+      <div class="aboutImage" id="aboutImage">
+        <img src="./assets/avatar.jpg" class="avatar" id="avatar" />
+      </div>
+    </div>
+    <div class="services" id="services">
+      <div class="servicesHeaderBlock" id="servicesHeaderBlock">
+        <p class="servicesHead">Our Services</p>
+        <p class="servicesHeadContent">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam ab harum
+          commodi laboriosam repellendus fuga! Quisquam tempora <br />
+          nihil odio atque nesciunt iusto, quam sit corrupti ea pariatur tenetur
+          facilis ab!
+        </p>
+      </div>
+      <div class="servicesBlock" id="servicesBlock">
+        <div class="blocks" id="blocks">
+          <img src="./assets/tattooing.png" /><br /><br />
+          <p class="blockHeader" id="blockHeader">Tattooing</p>
+          <p class="blockContent" id="blockContent">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti
+            fuga soluta eligendi. Atque nesciunt earum magnam nam eligendi
+            doloribus.
+          </p>
+        </div>
+        <div class="blocks" id="blocks">
+          <img src="./assets/tattoodesign.png" /><br /><br />
+
+          <p class="blockHeader" id="blockHeader">Tattoo Design</p>
+          <p class="blockContent" id="blockContent">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti
+            fuga soluta eligendi. Atque nesciunt earum magnam nam eligendi
+            doloribus.
+          </p>
+        </div>
+        <div class="blocks" id="blocks">
+          <img src="./assets/tattooRemoval.png" /><br /><br />
+
+          <p class="blockHeader" id="blockHeader">Tattoo Removal</p>
+          <p class="blockContent" id="blockContent">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti
+            fuga soluta eligendi. Atque nesciunt earum magnam nam eligendi
+            doloribus.
+          </p>
+        </div>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
