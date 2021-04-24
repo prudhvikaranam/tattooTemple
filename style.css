@@ -129,6 +129,9 @@ body {
     .name{
         font-size: 15px;
     }
+    .aboutContainer{
+        flex-direction: column-reverse;
+    }
     .servicesBlock{
         padding: 0px 60px;
         flex-direction: column;
