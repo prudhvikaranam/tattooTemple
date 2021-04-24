@@ -1,28 +1,40 @@
-document.onreadystatechange = function() {
+document.onreadystatechange = function () {
   if (document.readyState !== "complete") {
-      document.querySelector("body").style.visibility = "hidden";
-      document.querySelector("#loader").style.visibility = "visible";
+    document.querySelector("body").style.visibility = "hidden";
+    document.querySelector("#loader").style.visibility = "visible";
   } else {
-      document.querySelector("#loader").style.display = "none";
-      document.querySelector("body").style.visibility = "visible";
+    document.querySelector("#loader").style.display = "none";
+    document.querySelector("body").style.visibility = "visible";
   }
 };
 
+function resetHeight() {
+  // reset the body height to that of the inner browser
+  document.body.style.height = window.innerHeight + "px";
+}
+// reset the height whenever the window's resized
+window.addEventListener("resize", resetHeight);
+// called to initially set the height.
+resetHeight();
 
-(function(){
-  let backGroundImages = ['./assets/background.jpg','./assets/background1.jpg','./assets/background2.jpg']
+(function () {
+  let backGroundImages = [
+    "./assets/background.jpg",
+    "./assets/background1.jpg",
+    "./assets/background2.jpg",
+  ];
   let i = 0;
   setInterval(() => {
-      if(i < backGroundImages.length){
-        console.log();
-        document.getElementById('landingContainer').style.backgroundImage =  'url(' + backGroundImages[i] + ')';
-        i++;
-      }else{
-        i = 0;
-      }
+    if (i < backGroundImages.length) {
+      console.log();
+      document.getElementById("landingContainer").style.backgroundImage =
+        "url(" + backGroundImages[i] + ")";
+      i++;
+    } else {
+      i = 0;
+    }
   }, 5000);
 })();
-
 
 function studioName(element, speed) {
   let text = element.innerHTML;
@@ -57,5 +69,3 @@ function studioQuote(element, speed) {
     }
   }, speed);
 }
-
-
