@@ -11,7 +11,7 @@ body {
 }
 
 .landingContainer {
-    min-height: 100vh;
+    height: 100vh;
     background: url('./assets/background.jpg') no-repeat center center/cover;
     background-attachment: fixed;
     background-position: center;
@@ -27,7 +27,7 @@ body {
     flex-direction: column;
     justify-content: center;
     background-color: rgba(0, 127, 128, 0.6);
-    min-height: 100vh;
+    height: 100vh;
     align-items: center;
     color: white;
 }
@@ -128,5 +128,9 @@ body {
     }
     .name{
         font-size: 15px;
+    }
+    .servicesBlock{
+        padding: 0px 60px;
+        flex-direction: column;
     }
 }
