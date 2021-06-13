@@ -18,7 +18,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    transition: background 3s linear;
+    transition: background 2s linear;
 
 }
 
@@ -27,10 +27,24 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: rgba(0, 127, 128, 0.6);
     height: 100%;
     align-items: center;
     color: white;
+}
+
+/* 
+.landingtext::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 127, 128, 0.6);
+} */
+
+.landingContainer * {
+    z-index: 10;
 }
 
 .name {
@@ -47,12 +61,16 @@ body {
 }
 
 .about {
-    width: 50%;
+    width: 60%;
+}
+
+.aboutImage {
+    width: 25%;
 }
 
 .avatar {
     border-radius: 50%;
-    width: 300px;
+    width: 100%;
 }
 
 .aboutHead,
@@ -116,25 +134,43 @@ body {
     border-radius: 6px;
 }
 
-
-
-
 @media only screen and (max-width:500px) {
     .landingContainer {
         height: 100vh;
         text-align: center;
     }
+
     #h1 {
         font-size: 40px;
     }
-    .name{
+
+    .name {
         font-size: 15px;
     }
-    .aboutContainer{
+
+    .aboutContainer {
         flex-direction: column-reverse;
     }
-    .servicesBlock{
+
+    .servicesBlock {
         padding: 0px 60px;
         flex-direction: column;
+    }
+
+    .about {
+        width: 80%;
+        text-align: center;
+    }
+
+    .aboutImage {
+        width: 60%;
+    }
+}
+
+
+
+@media (max-width: 700px) {
+    .form-row {
+        display: block;
     }
 }
