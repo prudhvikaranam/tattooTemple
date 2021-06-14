@@ -8,6 +8,52 @@ document.onreadystatechange = function () {
   }
 };
 
+function studioName(element, speed) {
+  let text = element.innerHTML;
+  element.innerHTML = "";
+  var i = 0;
+  let timer = setInterval(function () {
+    if (i < text.length) {
+      element.append(text.charAt(i));
+      i++;
+    } else {
+      clearInterval(timer);
+      const name = document.getElementById("name");
+      studioQuote(name, 0);
+    }
+  }, speed);
+}
+
+const h1 = document.getElementById("h1");
+
+studioName(h1, 50);
+
+function studioQuote(element, speed) {
+  let text = `Lorem ipsum dolor, sit amet consectetur adipisicing elit.`;
+  element.innerHTML = "";
+  var i = 0;
+  let timer = setInterval(function () {
+    if (i < text.length) {
+      element.append(text.charAt(i));
+      i++;
+    } else {
+      clearInterval(timer);
+    }
+  }, speed);
+}
+
+
+
+
+
+
+
+
+
+
+// unused
+
+
 // function resetHeight() {
 //   // reset the body height to that of the inner browser
 //   document.body.style.height = window.innerHeight + "px";
@@ -33,37 +79,3 @@ document.onreadystatechange = function () {
 //     }
 //   }, 5000);
 // })();
-
-function studioName(element, speed) {
-  let text = element.innerHTML;
-  element.innerHTML = "";
-  var i = 0;
-  let timer = setInterval(function () {
-    if (i < text.length) {
-      element.append(text.charAt(i));
-      i++;
-    } else {
-      clearInterval(timer);
-      const name = document.getElementById("name");
-      studioQuote(name, 0);
-    }
-  }, speed);
-}
-
-const h1 = document.getElementById("h1");
-
-studioName(h1, 50);
-
-function studioQuote(element, speed) {
-  let text = "Lorem ipsum dolor, sit amet consectetur adipisicing elit.";
-  element.innerHTML = "";
-  var i = 0;
-  let timer = setInterval(function () {
-    if (i < text.length) {
-      element.append(text.charAt(i));
-      i++;
-    } else {
-      clearInterval(timer);
-    }
-  }, speed);
-}
